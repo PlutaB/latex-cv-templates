@@ -4,9 +4,13 @@ Two clean, two-page A4 CV templates written independently for Chinese and Englis
 
 ## Previews
 
-| Chinese template | English template |
-| --- | --- |
-| [![Chinese CV template](previews/Chinese_CV_Template_preview.png)](examples/Chinese_CV_Template.pdf) | [![English CV template](previews/English_CV_Template_preview.png)](examples/English_CV_Template.pdf) |
+### English template
+
+[![English CV template](previews/English_CV_Template_preview.png)](examples/English_CV_Template.pdf)
+
+### Chinese template
+
+[![Chinese CV template](previews/Chinese_CV_Template_preview.png)](examples/Chinese_CV_Template.pdf)
 
 Click either preview to open the corresponding example PDF.
 
