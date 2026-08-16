@@ -1,0 +1,177 @@
+% 匿名中文双页简历模板
+% 使用 XeLaTeX 编译；请将示例字段替换为个人信息。
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,top=14mm,bottom=14mm,left=17mm,right=17mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+
+\setmainfont{Calibri}
+\setCJKmainfont{Microsoft YaHei}
+\XeTeXgenerateactualtext=1
+\definecolor{accent}{HTML}{3F489D}
+\definecolor{secondary}{HTML}{7281C2}
+\definecolor{panelbg}{HTML}{F0F2F8}
+\definecolor{textgrey}{HTML}{24282B}
+\definecolor{muted}{HTML}{5F686E}
+
+\hypersetup{pdftitle={中文简历模板},pdfauthor={姓名},pdfsubject={个人简历}}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\color{muted}\scriptsize 姓名 \enspace | \enspace 目标方向 \enspace | \enspace \thepage/2}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.23}
+\setlength{\JustifyingParindent}{0pt}
+\justifying
+\setlength{\emergencystretch}{3em}
+\tolerance=2500
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\color{textgrey}
+
+\titleformat{\section}{\color{accent}\bfseries\large\raggedright}{}{0pt}{}[\color{accent}{\titlerule[1.5pt]}]
+\titlespacing*{\section}{0pt}{9pt}{5.5pt}
+
+\newcommand{\cvheading}[4]{%
+  \par\addvspace{5pt}\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xr@{}}
+    \textbf{#1} & \color{muted}\small #2 \\
+    #3 & \color{muted}\small #4
+  \end{tabularx}\par\vspace{-1pt}}
+\newcommand{\cvheadingfirst}[4]{%
+  \par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xr@{}}
+    \textbf{#1} & \color{muted}\small #2 \\
+    #3 & \color{muted}\small #4
+  \end{tabularx}\par\vspace{-1pt}}
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=4.6mm,label=\raisebox{0.25ex}{\tiny$\bullet$},itemsep=2.2pt,topsep=2.4pt,parsep=0pt,partopsep=0pt]\justifying
+}{\end{itemize}\vspace{2pt}}
+\newcommand{\skillline}[2]{\justifying\textbf{#1：}#2\par\vspace{1.5pt}}
+
+\begin{document}
+\noindent\begin{minipage}[t]{0.69\linewidth}
+  {\fontsize{27}{30}\selectfont\bfseries 姓名}\par
+  \vspace{11pt}
+  {\color{accent}\bfseries\fontsize{12}{15}\selectfont 方向关键词 \enspace | \enspace 核心能力 \enspace | \enspace 目标岗位}\par
+  \vspace{6pt}
+  {\small
+    Tel: XXXXXXXXX\par
+    \href{mailto:name@example.com}{name@example.com} \enspace | \enspace
+    \href{https://github.com/username}{github.com/username}
+  }
+  \par\vspace{9pt}
+  \hspace*{2em}用2--3句话概括专业背景、研究方向、核心技术和求职目标。优先呈现与目标岗位直接相关的优势，不堆砌形容词。
+\end{minipage}\hfill
+\begin{minipage}[t]{0.27\linewidth}
+  \raggedleft\vspace*{-7mm}
+  \includegraphics[width=47mm,height=57mm,keepaspectratio]{鲁迅.jpeg}
+\end{minipage}
+\par\vspace{6pt}
+
+\section{教育背景}
+\cvheadingfirst{学校名称（University Name）}{20XX年至今}{博士研究生，专业／院系}{ }
+\begin{cvitems}
+  \item 研究方向：用一行说明核心问题、专业方向或技术平台。
+  \item 预计20XX年X月提交论文、X月答辩。
+\end{cvitems}
+
+\cvheading{学校名称（University Name）}{20XX-20XX}{理学硕士，专业名称；毕业成绩：等级}{ }
+\begin{cvitems}
+  \item 主修课程：列出与申请岗位最相关的3--5门课程或训练模块。
+  \item 毕业项目、奖项或成绩亮点另起一行呈现。
+\end{cvitems}
+
+\cvheading{学校名称（University Name）}{20XX-20XX}{工学学士，专业名称，GPA X.X/X.X}{ }
+\begin{cvitems}
+  \item 主修课程：列出与行业和岗位最相关的基础课程。
+  \item 奖学金、优秀论文或竞赛奖项可在此概括。
+\end{cvitems}
+
+\section{核心研究经历}
+\cvheadingfirst{研究课题／项目名称}{20XX年至今}{博士研究课题，学校或研究机构}{ }
+\begin{cvitems}
+  \item 研究目的：说明模型、靶点或机制问题，以及项目希望解决的关键挑战。
+  \item 实验设计：概括主要变量、对照、样本规模或关键技术路线。
+  \item 技术方法：列出与岗位相关的方法，并说明你独立负责的环节。
+  \item 研究结果：尽可能使用数字描述改善幅度、重复次数、准确率或阶段性结论。
+\end{cvitems}
+
+\cvheading{研究课题／项目名称}{20XX.XX-20XX.XX}{研究助理／项目成员，机构名称}{ }
+\begin{cvitems}
+  \item 使用技术A、技术B和技术C验证候选靶点或优化实验流程。
+  \item 设计处理条件和评价指标，形成可复用的实验方案并汇报结果。
+\end{cvitems}
+
+\cvheading{毕业项目名称}{20XX.XX-20XX.XX}{硕士毕业项目，学校×合作机构}{项目评级／奖项}
+\begin{cvitems}
+  \item 建立或应用定量实验／分析方法，说明样本、指标和数据处理方式。
+  \item 给出最有说服力的结果及其科学或应用意义。
+\end{cvitems}
+
+\newpage
+\begin{flushright}
+  {\Large\bfseries 姓名}\par
+  \vspace{2pt}
+  {\color{muted}\small name@example.com \enspace | \enspace Tel: XXXXXXXXX}
+\end{flushright}
+\vspace{-10pt}
+
+\section{其他研究与行业经历}
+\cvheadingfirst{研究／创新项目名称}{20XX.XX-20XX.XX}{项目负责人／项目成员，机构名称}{ }
+\begin{cvitems}
+  \item 说明团队规模、个人职责和项目目标，避免仅罗列实验名称。
+  \item 用量化结果说明方法建立、流程优化、候选物筛选或交付成果。
+\end{cvitems}
+
+\cvheading{应用／流程／质量项目名称}{20XX.XX-20XX.XX}{毕业项目／联合项目，学校×企业}{项目奖项}
+\begin{cvitems}
+  \item 概括方案筛选、方法开发、流程优化或质量研究任务。
+  \item 说明采用的仪器、评价标准及最终结论。
+\end{cvitems}
+
+\cvheading{企业官方全称}{20XX.XX-20XX.XX}{质量控制／研发实习生}{ }
+\begin{cvitems}
+  \item 参与样品检测、稳定性研究、实验记录或质量体系相关工作。
+  \item 描述具体方法、检测对象及你承担的责任。
+\end{cvitems}
+
+\cvheading{企业官方全称}{20XX.XX-20XX.XX}{研发实验助理／实习生}{ }
+\begin{cvitems}
+  \item 参与实验执行、流程优化或研发样品分析。
+  \item 如有可公开结果，用数字说明效率、通量或一致性改进。
+\end{cvitems}
+
+\section{核心技能}
+\skillline{专业方法}{方法A；方法B；方法C；方法D；方法E。}
+\skillline{技术平台}{平台A；平台B；平台C；仪器或系统。}
+\skillline{数据与分析}{数据处理；可视化；统计软件；编程语言。}
+\skillline{软件与工具}{专业软件；项目工具；质量体系；合规基础。}
+
+\section{领导与组织经历}
+\cvheadingfirst{学生组织／专业协会名称}{20XX.XX-20XX.XX}{主席团成员／部门负责人}{ }
+\begin{cvitems}
+  \item 负责X人团队的规划、分工和跨部门协作，建立例会或项目管理机制。
+  \item 策划并交付X场活动，覆盖X人；管理预算、宣传、供应商或风险预案。
+\end{cvitems}
+
+\cvheading{社团／志愿组织名称}{20XX.XX-20XX.XX}{主席／项目负责人}{ }
+\begin{cvitems}
+  \item 说明组织规模、年度目标和你推动的制度或流程改进。
+  \item 突出可迁移的领导力、沟通、谈判和问题解决能力。
+\end{cvitems}
+
+\section{语言及其他}
+\skillline{语言}{中文：母语 \enspace | \enspace 英语：熟练（可注明标准化成绩）}
+\skillline{其他}{奖项、证书、专业会员资格或与岗位相关的补充信息。}
+\end{document}
